@@ -1,5 +1,5 @@
 # json-translations-with-deepl
-This small script that will help you to translate your app language keys into the chosen language. i18.
+This small script will help you to translate your app language keys into the chosen language. i18.
 (Deepl has some limitations in terms of characters translated per month and target languages allowed with free accounts).
 
 First of all, you must register at Deelpl.com to get the tokenId.
@@ -29,4 +29,4 @@ Copy your key: value translation text into jsonKeysFile.json
 In file **json-translations-with-deepl** line 70, *getDeeplTranslations* have two parameters.
 You must specify what your target language is, and as optional your source language, default is English.
 
-If everything thing goes as it should, you will have your translations ready in **translations.json** file.
+If everything goes as it should, you will have your translations ready in **translations.json** file.
