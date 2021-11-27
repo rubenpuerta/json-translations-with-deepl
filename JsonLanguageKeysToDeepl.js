@@ -52,9 +52,9 @@ const setKeysToTranslations = async (deeplTranslatedText) => {
   }
 };
 
-const storeData = async (data) => {
+const storeData = (targetLanguage) => async (data) => {
   try {
-    fs.writeFileSync("translations.json", JSON.stringify(await data));
+    fs.writeFileSync(`${targetLanguage}.json`, JSON.stringify(await data));
   } catch (err) {
     Error("Error saving json file");
   }
@@ -64,7 +64,22 @@ const getDeeplTranslations = (targetLanguage, sourceLanguage) =>
   pipe(
     deeplResponseTransformer,
     setKeysToTranslations,
-    storeData
+    storeData(targetLanguage)
   )(getDeeplResponse(targetLanguage, sourceLanguage));
 
-getDeeplTranslations("it");
+const targetLanguages = [
+  "ja",
+  "de",
+  "fr",
+  "pt-pt",
+  "pl",
+  "nl",
+  "en-gb",
+  "it",
+  "el",
+];
+const originLanguage = "en";
+
+targetLanguages.forEach((targetLanguage) => {
+  getDeeplTranslations(targetLanguage, originLanguage);
+});

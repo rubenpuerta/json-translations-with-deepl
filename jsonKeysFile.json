@@ -1,9 +1,3 @@
 {
-  "language.it.label": "Italian",
-  "language.de.label": "German",
-  "language.ja.label": "Japonese",
-  "language.zh.label": "Chinese",
-  "language.pt.label": "Portuguese",
-  "language.fr.label": "French",
-  "language.nl.label": "Dutch"
+  "test-key": "translatate me"
 }
