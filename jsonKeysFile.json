@@ -1,3 +1,4 @@
 {
-  "test-key": "translatate me"
+  "test.key.one": "your text",
+  "test.key.two": "another sentence"
 }

@@ -6,6 +6,9 @@
   "dependencies": {
     "axios": "^0.24.0"
   },
+  "scripts": {
+    "start": "node JsonLanguageKeysToDeepl.js"
+  },
   "devDependencies": {
     "@types/node": "^16.11.7",
     "typescript": "^4.4.4"
